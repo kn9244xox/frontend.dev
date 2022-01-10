@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ja">
+<meta name="google" content="notranslate">
+<!--CSS-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/header.css" rel="stylesheet">
+<link href="css/fotter.css" rel="stylesheet">
+<link rel="icon" href="../gazou/logo.jpg">
+<title>要素・属性によるセレクター</title>
+</head>
+<body>
+
+    <div id="home">
+    <header>
+      <div class="logo">
+        <a href="../../../index.html" class="mylogo">web school</a>
+      </div>
+      <nav>
+        <a class="nav-link" href="../../../index.html">トップ</a>
+        <a class="nav-link" href="../../../preparation-sub-top/preparatiion.html">制作準備</a>
+        <a class="nav-link" href="../../../html-sub-top/create.html">作り方</a>
+        <a class="nav-link" href="../../../design-sub-top/design.html">デザイン</a>
+      </nav>
+    
+      </header>
+  </div>
+
+  <div id="news" class="big-bg">
+
+    <div class="news-contents wrapper"> 
+    <article>
+    <header class="post-info">
+    <h1 class="post-title" id="c1"><b>1.要素によるセレクター</b></h1>
+    </header>
+
+
+
+<pre>
+<h2>指定したい要素が1つの時</h2>
+<b>
+h1{
+      Color:pink;
+}</b>
+指定したい要素名を<b><span style="background: linear-gradient(transparent 70%, #FFFF7F 0%);">１つだけ</span></b>、記して色を変える。
+
+表示例
+<img class="hyouzirei" src="セレクタ前編画像/１/1.png" alt="表示例1">
+
+<h2>指定したい要素が2つ以上の時</h2>
+<b>
+h1, P{
+        Color:pink;
+}</b>
+要素と要素、h1とpの間に<b>, </b>(カンマ)を入れてセレクターを指定すると、h1とpの要素にデザインが適応されます。
+
+表示例
+<img class="hyouzirei" src="セレクタ前編画像/2/2.png" alt="表示例2">
+
+<h2>指定したい要素が要素の中にある時</h2>
+<b>
+h1 p{
+      Color:pink;
+}</b>
+要素と要素の間に<b><span style="background: linear-gradient(transparent 70%, #FFFF7F 0%);">半角スペース</span></b>を入れてセレクタを、指定すると<b><span style="background: linear-gradient(transparent 70%, #FFFF7F 0%);">h1の中のp</span></b>を指定できます。
+
+表示例
+<img class="hyouzirei" src="セレクタ前編画像/3/3.png" alt="表示例3">
+
+<h2>親要素内の一階層下の子要素を指定したい時</h2>
+<b>
+h1>p{
+      Color:pink;
+}</b>
+要素と要素の間に <b>></b> を入れてセレクタを指定すると、<b><span style="background: linear-gradient(transparent 70%, #FFFF7F 0%);">h1に囲まれている一番最初の要素p</span></b>を指定できます。
+
+表示例
+<img class="hyouzirei" src="セレクタ前編画像/4/4.png" alt="表示例4">
+
+<h2>指定したい要素の後ろにある同じ階層の要素を指定したい時</h2>
+<b>
+h1~p{
+      Color:pink;
+}</b>
+要素と要素の間に~を入れてセレクタを指定すると、<b><span style="background: linear-gradient(transparent 70%, #FFFF7F 0%);">要素h1の後ろにある同じ階層の要素p</span></b>を全部指定できます。
+
+表示例
+<img class="hyouzirei" src="セレクタ前編画像/5/5.png" alt="表示例5">
+
+<header class="post-info">
+<h1 class="post-title" id="c2"><b>2.属性によるセレクター</b></h1>
+</header>
+
+<h2>・要素名[属性名]</h2>
+<b>
+p［class］{
+    color:pink;
+}</b>
+<b><span style="background: linear-gradient(transparent 70%, #FFFF7F 0%);">class属性があるpタグのみ</span></b>指定できます。
+
+表示例
+<img class="hyouzirei" src="セレクタ前編画像/6/6.png" alt="表示例6">
+     
+<h2>・要素名[属性名=”属性値”]</h2>
+        
+<b>
+p［class="pink"］{
+    color:
+}</b>
+指定の属性が指定の属性値を持っている要素のみ指定できます。
+
+表示例
+<img class="hyouzirei" src="セレクタ前編画像/7/7.png" alt="表示例7">
+    
+<h2>・要素名[属性名~=”属性値”]</h2>
+<b>
+p［class~="pink"］{
+    color:
+}</b>
+=（イコール）の前に~（チルダ）を記述すると、指定の属性が<b><span style="background: linear-gradient(transparent 70%, #FFFF7F 0%);">指定の属性値を含んでいる要素のみ</span></b>指定できます。
+
+表示例
+<img class="hyouzirei" src="セレクタ前編画像/8/8.png" alt="表示例8">
+    
+<h2>・要素名[属性名^=”文字列”]</h2> 
+<b>
+p［class^="red"］{
+    color:
+}</b>
+=（イコール）の前に^（キャレット）を記述すると、<b><span style="background: linear-gradient(transparent 70%, #FFFF7F 0%);">指定の文字列から始まる属性値を持っている要素</span></b>を指定できます。
+
+表示例
+<img class="hyouzirei" src="セレクタ前編画像/9/9.png" alt="表示例9">
+    
+<h2>・要素名[属性名$=”文字列”]</h2> 
+<b>
+p［class$="001"］{
+    color:
+}</b>
+=（イコール）の前に$（ドル）を記述すると、<b><span style="background: linear-gradient(transparent 70%, #FFFF7F 0%);">指定の文字列で終わる属性値を持っている要素</span></b>を指定できます。
+ 
+表示例
+<img class="hyouzirei" src="セレクタ前編画像/10/10.png" alt="表示例10">
+
+<h2>・要素名[属性名*=”文字列”]</h2>
+<b>
+p［class*="001"］{
+    color:
+}</b>
+=（イコール）の前に*（アスタリスク）を記述すると、<b><span style="background: linear-gradient(transparent 70%, #FFFF7F 0%);">指定の文字列を含む属性値を持っている要素</span></b>を指定できます。
+
+表示例
+<img class="hyouzirei" src="セレクタ前編画像/11/11.png" alt="表示例11">
+
+
+
+
+
+
+
+     <a href="疑似クラスおよび疑似要素によるセレクター.html" class="btn btn-border-shadow btn-border-shadow--radius next">次へ</a>
+</pre>
+<a href="#" class="btn btn-border-shadow btn-border-shadow--radius back">戻る</a>
+
+    </article>
+    
+<aside>
+  <div class="widget--sticky">
+  <h2 class="sub-title">目次</h2>
+  <ul class="sub-menu">
+  <li><a href="#c1">要素による<br>セレクター</a></li>
+  <li><a href="#c2">属性による<br>セレクター</a></li>
+  </ul>
+  </div>
+  </aside>
+  </div>
+  <footer>
+    <div>
+      <ul>
+        <li><a class="nav-link" href="../../../preparation-sub-top/preparatiion.html" >制作準備</a></li>
+        <li><a class="nav-link" href="../../../html-sub-top/create.html" >作り方&nbsp;&nbsp;</a></li>
+        <li><a class="nav-link" href="../../../design-sub-top/design.html" >デザイン</a></li>
+      </ul>
+    </div>
+    <div class="copy">
+      <p><small> Copyright &copy; 2021 All Rights Reserved by 僕たちも素人でした</small></p>
+    </div>
+  </footer>
+
+</body>
+</html>

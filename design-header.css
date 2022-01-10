@@ -1,0 +1,141 @@
+header {
+  background-color: #00233300;
+  width: 100vh;
+  height: 50vh;
+  background-image: url(banner.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  /* ここで各ページのヘッダーを設定する */
+
+
+}
+
+
+
+nav {
+  margin-left: 1rem;
+  margin-top: 0.3rem;
+  display: flex;
+}
+
+/* 右上ナビゲーションバーのホバーアニメーション */
+
+header nav .nav-link {
+  display:inline-block;
+  position:relative;
+  cursor:pointer;
+
+
+}
+header nav .nav-link::after{content:'';
+  position:absolute;
+  left:50%;
+  bottom:-14px;
+  width:60%;
+  height:3px;
+  opacity:0;
+  background-color:#f39c12;
+  transform:translate(-50%,0);
+  transition:all .3s ease-in-out} 
+  /*liをホバー時に下線表示*/
+header nav .nav-link:hover::after{width:100%;opacity:1}
+
+header nav .nav-link {
+ 
+  padding: 0 11px;
+  transition: all .3s ease 0s;
+  text-decoration: none;
+  color: rgb(9, 4, 65);
+  font-weight: 900;
+  /* text-shadow: -2px -3px 0px #796969; */
+}
+
+header nav .nav-link:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+
+  .logo .mylogo {
+  font-size: 40px;
+  margin-left: 5rem;
+  position: relative;
+  top: 26px;
+  color:rgb(212, 33, 33);
+}
+
+
+
+
+
+
+
+/*for tablets */
+@media screen and (min-width: 490px) {
+  header {
+    width: 100%;
+  }
+  .logo .mylogo {
+    font-size: 38px;
+    margin-left: 9.5rem;
+  }
+  nav {
+    margin-left: 4rem;
+  }
+  nav .nav-link {
+    color: white;
+    padding: 0 30px;
+  }
+}
+/*for pc small screen */
+@media screen and (min-width: 720px) {
+  header {
+    width: 100%;
+    position: relative;
+  }
+  .logo .mylogo {
+    font-size: 30px;
+    margin-left: 1rem;
+    position: relative;
+    top: 27px;
+  }
+  nav {
+    margin-right: 3rem;
+    float: right;
+    line-height: 2px;
+  }
+  nav .nav-link {
+    padding: 10px 30px;
+  }
+}
+/*for pc large screen*/
+@media screen and (min-width: 1200px) {
+  header {
+    width: 100%;
+    position: relative;
+  }
+  .logo .mylogo {
+    font-size: 30px;
+    
+    margin-left: 5rem;
+    position: relative;
+    top: 29px;
+  }
+  nav {
+    margin-right: 5rem;
+    float: right;
+    margin-bottom: 35px;
+  }
+  nav .nav-link {
+    padding: 10px 0px;
+    margin: 0 40px;
+    font-size: 25px;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    margin-top: -14px;
+    
+}
+}

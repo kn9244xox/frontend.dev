@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ja">
+<meta name="google" content="notranslate">
+<!--CSS-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/header.css" rel="stylesheet">
+<link href="css/fotter.css" rel="stylesheet">
+<link rel="icon" href="gazou/logo.jpg">
+<title>cssを知ろう</title>
+</head>
+
+<body> 
+    <div id="home">
+    <header>
+      <div class="logo">
+        <a href="#" class="mylogo">Web School</a>
+      </div>
+      <nav>
+        <a class="nav-link" href="../../index.html">トップ</a>
+        <a class="nav-link" href="../../preparation-sub-top/preparatiion.html">制作準備</a>
+        <a class="nav-link" href="../../html-sub-top/create.html">作り方</a>
+        <a class="nav-link" href="../../design-sub-top/design.html">デザイン</a>
+      </nav>
+    
+      </header>
+  </div>
+
+  <div id="news" class="big-bg">
+
+    <div class="news-contents wrapper"> 
+    <article>
+    <header class="post-info">
+    <h1 class="post-title"><b>cssを知ろう</b></h1>
+    </header>
+
+<h2 id="c1">01.CSSを知ろう</h2>
+  <pre><p class="html">
+  HTMLは記述した内容がブラウザ側でしっかり認識されるようにする根幹的な言語だ。
+
+  それに対し、CSSはHTMLで記述した文章に<b><span style="background: linear-gradient(transparent 70%, #FFFF7F 0%);">色や配置</span></b>、<b><span style="background: linear-gradient(transparent 70%, #FFFF7F 0%);">フォントの指定</span></b>などデザインのほぼ全てがCSSで記述可能です。
+  HTMLで役割を決めて、CSSで要素のデザインを決めていると考えればいい。
+  CSSでは主に<b><span style="background: linear-gradient(transparent 70%, #FFFF7F 0%);">何をどう変えたいのか</span></b>記述します。
+  </p></pre>
+  <pre><p class="html">
+  例えばある文字の色を赤にしたいとします。
+  HTMLで&lt;div&gt;で囲ってあげてCSSで以下の様に記述することで赤色にできます。
+          <div class="iro">
+            &lt;body&gt;
+                &lt;h1&gt;あいうえお&lt;/h1&gt;
+            &lt;/body&gt;
+          </div>
+  下記の文章がない場合が図1、ある場合が図2となる
+          <div class="iro">
+            div{
+              color: red;
+            }
+          </div>
+  図1
+  <img src="gazou/スクリーンショット (19).png" alt="図1">  
+
+  図2
+  <img src="gazou/スクリーンショット (20).png" alt="図2">
+  </p></pre>
+
+  <pre>
+  ここで今後必要になる用語を説明します。
+  ここでのdiv、つまり<b><span style="background: linear-gradient(transparent 70%, #FFFF7F 0%);">何を</span></b>に当たる部分をセレクタと呼びます。Selectが選択という意味からも理解できます。
+
+  また、上記の<b><span style="background: linear-gradient(transparent 70%, #FFFF7F 0%);">どう変えたいか</span></b>が、
+  変更内容を表すColorやwidth(幅),height(高さ)であり、これを<b><span style="background: linear-gradient(transparent 70%, #FFFF7F 0%);">プロパティー</span></b>と呼びます。
+  プロパティーの後には必ず、具体的な数値や色などが来ます。この部分は値と呼びます。ここでいう"red"です。
+  プロパティーの後ろに必ず:コロンがきます。値の後は;が必ず置かれます。
+    
+  ※複数プロパティを記述しない場合、値の後の;は必須ではないが今後プロパティーを追加する
+  可能性を鑑み、;はつけとくべきなので本サイトではこのように説明する。
+
+  </pre>
+
+<h2 id="c2">02.	CSSの書き方は三種類ある</h2>
+  <pre><p class="html">
+  CSSの書き方は大きくわけて三種類あります。
+  まずは一番使われる外部スタイルシート方式から説明します。
+
+            <h3><b>・外部スタイルシート方式</b></h3>
+
+  これは、HTMLファイルとは別にCSSファイルを作り記述していく方式です。もちろん、外部ファイルで
+  記述していくわけですから、HTMLファイルにCSSを読み込みさせる記述が必須となります。
+  テキストエディター(内部リンク)で記述し、拡張子.cssを付けて
+  保存することでPC側がCSSファイルであると認識してくれる。
+        
+          <b><span style="background: linear-gradient(transparent 70%, #FFFF7F 0%);">&lt;link rel="stylesheet" href="ファイル名.css"&gt;</span></b>
+
+  HTMLファイルの&lt;head&gt;タグの中に上記のように記述すると読み込みされる。
+  HTMLファイルと同じフォルダ内にCSSファイルがない場合、パスを指定してあげる必要がある。
+  詳しくは別途このサイトを参照してほしい。絶対パスと相対パス(内部リンク)
+
+  この方法が一番実用的である。何故ならCSSとHTMLの記述を分けて
+  管理することになるので、コードが見やすくなり可読性が高まるからだ。
+  また、部分ごとにCSSファイルも分けることができるので、管理がしやすくなる。
+  読み込みするCSSファイルは一つと決まっていないため、複数ファイル読み込み可能である。
+
+  本サイトも、ヘッダーやフッターといったどのページでも
+  共通表示される部分はそれぞれ独立したファイルを作り、読み込みさせることで、作業の効率化を図った。
+  情報は日々変わるものである、必ずサイトの内容を変える日はやってくる。
+
+
+        
+              <h3><b>・内部スタイルシート</b></h3>
+
+  この方法はHTMLファイル内に
+  <div class="iro">
+  &lt;style&gt;
+  div {
+        font-size:1.5rem;
+  }
+  Color:red;
+  &lt;/style&gt;
+  </div>
+  のようにstyleタグの中にCSSを記述する方法。こちらはHTMLファイルの記述量が増えるため、おすすめはしない。
+
+
+    
+    　　　　　　<h3><b>・インラインスタイルシート</b></h3>
+    
+  インラインスタイル
+  →htmlのタグの中にかける
+  &lt;div style=”color:’red’; font-size:80px;”&gt;&lt;/div&gt;
+  タグの属性を用い、HTMLファイル内に記述する。
+  たまに使う何故ならデザインの詳細度が高いため、ここで記述したデザインが優先される。
+  局所性が高い、限定的なデザインを上書きしたい場合に使用する記述方法である。
+    
+
+
+  外部スタイルシート以外は実用性に欠けるため、基本的に外部スタイルシートだけ抑えれば問題ない。
+
+
+
+
+  </p></pre>
+  　<a href="index2.html" class="btn btn-border-shadow btn-border-shadow--radius next">次へ</a>
+</article>
+
+
+<aside>
+    <div class="widget--sticky">
+    <h2 class="sub-title">目次</h2>
+    <ul class="sub-menu">
+    <li><a href="#c1">cssを知ろう</a></li>
+    <li><a href="#c2">cssの書き方</a></li>
+    </ul>
+    </div>
+    </aside>
+    </div>
+
+<footer>
+    <div>
+      <ul>
+        <li><a class="nav-link" href="../../preparation-sub-top/preparatiion.html" >制作準備</a></li>
+        <li><a class="nav-link" href="../../html-sub-top/create.html" >作り方&nbsp;&nbsp;</a></li>
+        <li><a class="nav-link" href="../../design-sub-top/design.html" >デザイン</a></li>
+      </ul>
+    </div>
+    <div class="copy">
+      <p><small> Copyright &copy; 2021 All Rights Reserved by 僕たちも素人でした</small></p>
+    </div>
+  </footer>
+</body>
+</html>

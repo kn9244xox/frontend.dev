@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ja">
+<meta name="google" content="notranslate">
+<!--CSS-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/header.css" rel="stylesheet">
+<link href="css/fotter.css" rel="stylesheet">
+<link rel="icon" href="gazou/logo.jpg">
+<title>デザイン優先度</title>
+</head>
+
+<body> 
+    <div id="home">
+    <header>
+      <div class="logo">
+        <a href="#" class="mylogo">Web School</a>
+      </div>
+      <nav>
+        <a class="nav-link" href="../../index.html">トップ</a>
+        <a class="nav-link" href="../../design-sub-top/design.html">制作準備</a>
+        <a class="nav-link" href="../../html-sub-top/create.html">作り方</a>
+        <a class="nav-link" href="../../design-sub-top/design.html">デザイン</a>
+      </nav>
+    
+      </header>
+  </div>
+
+  <div id="news" class="big-bg">
+
+    <div class="news-contents wrapper"> 
+    <article>
+    <header class="post-info">
+    <h1 class="post-title"><b>デザイン優先度</b></h1>
+    </header>
+
+<h2>デザイン優先度とは</h2>
+  <pre><p class="html">
+  CSSはデザインを記述する言語です。
+  基本的に記述されている内容はブラウザ側が上から順に読み取り、情報を上書きしていきます。
+  記述方法により同じデザインを指定しても、優先度が違います。
+  今回は基本となる概念を理解していきます。
+  </p></pre>
+  <pre>
+  <h2 id="c1">01デザイン優先度とは何なのか</h2>
+  「デザイン指定が重複したとき，どのデザインを優先するか」の
+    優先度を定量評価したものになります
+
+  <b><span style="background: linear-gradient(transparent 70%, #FFFF7F 0%);">詳細度が高い順に並べるとid>クラス>何もないセレクタとなります。</span></b>
+
+　 &lt;p&gt;テスト&lt;/p&gt;をhtmlで記述された部分があるとします。
+  この部分の色を指定したい場合、p{ color:red;}のように記述します。
+  ただ例えばこの後にp{ color:blue;}と記述されていた場合どうなるでしょうか。
+  実は後に記述した青色が優先されます。
+  上から情報が上書きされるという考え方から皆さんも納得するされると思います。
+
+　ほかにも、記述の方法で優先度が変わります。
+  基本的に、詳細度(限定度)が高い指定方ほど、優先度が高いと考えてください。
+　 ここで役立つ詳細度の点数方法があるので紹介します。
+  <img class="nemui" src="gazou/specificity_img01.gif" alt="優先度">
+  上記の様に3桁の数字で、それぞれのスタイル指定に含まれている個数をカウントすることによって、
+  詳細度がどのくらい高いのか、確認することができます。
+
+　具体例を示すと、このようになります。
+　•body section#tile p → 詳細度：103
+　•div#main-tile → 詳細度：101
+  •h1 → 詳細度：001
+  •.content .inner → 詳細度：020
+  •* → 詳細度：000
+  詳しくは次のページで説明しますが、CSSで場所を指定する際
+  IDは#id名{}, クラス名は.クラス名{}、要素名は要素名{}と記述する
+  </pre>
+
+  <pre>
+  <h2 id="c2">02例外的にデザインを優先させる</b></h2>
+　上記で説明した部分は基本的な考え方になりますが、例外があります。
+  それがimportantです
+
+  &lt;h1&gt;あいうえお&lt;h1&gt;という記述に図1と図2のcssを適用した場合とその結果
+  　
+　図1    
+  !importantの記述がないので下のredが優先される                                                          
+　<img src="gazou/impnasi.png" alt="importantなし">　<img src="gazou/yazirusi.png" alt="矢印"><img src="gazou/スクリーンショット (22).png" alt="impなし結果"> 
+
+　図2
+　<b><span style="background: linear-gradient(transparent 70%, #FFFF7F 0%);">!importantがついているのでblueが優先される</span></b>
+　<img src="gazou/imp.png" alt="important"><img src="gazou/yazirusi - コピー.png" alt="矢印"><img src="gazou/スクリーンショット (60).png" alt="imp結果">
+  </pre>
+  <pre class="siyou">
+  <h2 id="c3">03使用上の注意点</b></h2>
+  Importantという機能は使用をできるだけ控えたほうが良いです。
+  何故なら、多くの場所に最優先指定がされていたら、
+  <b><span style="background: linear-gradient(transparent 70%, #FFFF7F 0%);">一体なにが本当に優先すべきプロパティなのか</span></b>、わけがわからなくなってしまいます。
+  コードを記述する上で、可読性や補完性は高いほど好ましい。
+　誰が見ても分かりやすい記述であればある程、何か問題発生した時に解決が早くなる。
+
+  </pre>
+    
+    <a href="index.html" class="btn btn-border-shadow btn-border-shadow--radius back">戻る</a>
+    <a href="article-2/要素・属性によるセレクター.html" class="btn btn-border-shadow btn-border-shadow--radius next">次へ</a>
+   
+</article>
+
+<aside>
+    <div class="widget--sticky">
+    <h2 class="sub-title">目次</h2>
+    <ul class="sub-menu">
+    <li><a href="#c1">デザイン優先度</a></li>
+    <li><a href="#c2">例外</a></li>
+    <li><a href="#c3">注意点</a></li>
+    </ul>
+    </div>
+    </aside>
+    </div>
+
+<footer>
+    <div>
+      <ul>
+        <li><a class="nav-link" href="../../preparation-sub-top/preparatiion.html" >制作準備</a></li>
+        <li><a class="nav-link" href="../../html-sub-top/create.html" >作り方&nbsp;&nbsp;</a></li>
+        <li><a class="nav-link" href="../../design-sub-top/design.html" >デザイン</a></li>
+      </ul>
+    </div>
+    <div class="copy">
+      <p><small> Copyright &copy; 2021 All Rights Reserved by 僕たちも素人でした</small></p>
+    </div>
+  </footer>
+</body>
+</html>

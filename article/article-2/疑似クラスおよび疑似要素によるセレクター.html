@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="ja">
+<meta name="google" content="notranslate">
+<!--CSS-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/header.css" rel="stylesheet">
+<link href="css/fotter.css" rel="stylesheet">
+<link rel="icon" href="../gazou/logo.jpg">
+<title>疑似クラスおよび疑似要素によるセレクタ</title>
+</head>
+<body>
+    <div id="home">
+        <header>
+          <div class="logo">
+            <a href="../../../index.html" class="mylogo">web school</a>
+          </div>
+          <nav>
+            <a class="nav-link" href="../../../index.html">トップ</a>
+            <a class="nav-link" href="../../../preparation-sub-top/preparatiion.html">制作準備</a>
+            <a class="nav-link" href="../../../html-sub-top/create.html">作り方</a>
+            <a class="nav-link" href="../../../design-sub-top/design.html">デザイン</a>
+          </nav>
+        
+          </header>
+      </div>
+    
+      <div id="news" class="big-bg">
+    
+        <div class="news-contents wrapper"> 
+        <article>
+        <header class="post-info">
+        <h1 class="post-title"><b>3.疑似クラスおよび疑似要素によるセレクタ</b></h1>
+        </header>    
+<pre>   
+<h2 id="c1">疑似クラスによるセレクタ</h2>
+    
+<h2>・a:link（未訪問のリンク要素の指定）</h2>
+<b>
+a:link{
+    color:pink;
+}</b>
+<b><span style="background: linear-gradient(transparent 70%, #FFFF7F 0%);">aタグに対して、そのリンクが未訪問の状態である場合</span></b>を指定してスタイルを適用します。
+    
+
+<h2>・a:visited（訪問済のリンク要素の指定）</h2>
+<b>
+a:visited{
+    color:pink;
+}</b>
+aタグに対して、<b><span style="background: linear-gradient(transparent 70%, #FFFF7F 0%);">そのリンクが訪問済の状態である場合</span></b>を指定してスタイルを適用します。
+    
+     
+<h2>・:hover（要素にマウスがホバーした際の指定）</h2>
+<b>
+a:hover{
+    color:pink;
+}</b>
+要素に対して<b><span style="background: linear-gradient(transparent 70%, #FFFF7F 0%);">マウスがホバーした状態</span></b>を指定してスタイルを適用させます。
+    
+    
+    
+<h2>・a:active（要素がアクティブ状態になった際の指定）</h2>
+<b>
+a:active{
+    color:pink;
+}</b>
+要素が<b><span style="background: linear-gradient(transparent 70%, #FFFF7F 0%);">アクティブの状態</span></b>の場合を指定してスタイルを適用させます。
+    
+aタグでは<b><span style="background: linear-gradient(transparent 70%, #FFFF7F 0%);">マウスを左クリックしてから離すまでがアクティブ状態</span></b>となります。
+
+上記四つのセレクタの表示例
+<img class="hyouzirei3" src="セレクタ後編画像/1~4/1~4.png" alt="表示例1～4">
+    
+<h2>・親要素　要素:nth-child(n)（親要素内のn番目の要素の指定）</h2>
+<b>
+親要素　要素:nth-child(n){
+    color:pink;
+}</b>
+親要素内にある<b><span style="background: linear-gradient(transparent 70%, #FFFF7F 0%);">すべての要素の中でn番目にある要素</span></b>にスタイルを適用させます。
+
+表示例
+<img class="hyouzirei2" src="セレクタ後編画像/5/5.png" alt="表示例5">
+  
+
+<h2>・親要素　要素:nth-of-type(n)
+    （親要素内の同じ種類の要素の中のn番目の要素）</h2>
+<b>
+親要素　要素:nth-of-type(n){
+    color:pink;
+}</b>
+親要素内にある<b><span style="background: linear-gradient(transparent 70%, #FFFF7F 0%);"></span>同じ種類の要素の中でn番目にある要素</b>に
+スタイルを適用させます。
+
+表示例
+<img class="hyouzirei3" src="セレクタ後編画像/6/6.png" alt="表示例6">
+    
+    
+<h2>・親要素:not(要素1)（要素1以外の要素の指定）</h2>
+<b>
+親要素:not(要素1){
+    color:pink;
+}</b>
+親要素内の<b><span style="background: linear-gradient(transparent 70%, #FFFF7F 0%);">指定の要素1を除外して</span></b>スタイルを適用させます。
+
+表示例
+<img class="hyouzirei2" src="セレクタ後編画像/7/7.png" alt="表示例7">
+ 
+
+    <h2 id="c2">疑似要素によるセレクタ</h2>
+    
+<h2>・属性値:: first-letter（要素の一文字目を指定）</h2>
+<b>
+p.属性値::first-letter{
+    color:pink;
+}</b>
+pタグ要素に属性値が反映され、<b><span style="background: linear-gradient(transparent 70%, #FFFF7F 0%);">pタグで囲ったテキストの一文字目</span></b>に適用されます。
+
+表示例
+<img class="hyouzirei2" src="セレクタ後編画像/8/8.png" alt="表示例8">
+
+
+<h2>・属性値::first-line（要素の一行目を指定)</h2>
+<b>
+p.属性値::first-line{
+    color:pink;
+}</b>
+pタグ要素に属性値が反映され、<b><span style="background: linear-gradient(transparent 70%, #FFFF7F 0%);">pタグで囲ったテキストの一行目</span></b>に適用されます。
+
+表示例
+<img class="hyouzirei2" src="セレクタ後編画像/9/9.png" alt="表示例9">
+    
+    
+<h2>・属性値::before（要素の直前にコンテンツを追加）</h2>
+<b>
+p.属性値::before{
+    content:"要素の直前にコンテンツを追加";
+    color:pink;
+}</b>
+first-letterやfirst-lineと違う点は、contentプロパティが必要ということです。
+    
+contentの中身にテキストを指定する場合は、<b><span style="background: linear-gradient(transparent 70%, #FFFF7F 0%);">ダブルコーテーションもしくはシングルコーテーション</span></b>で囲みます。
+またfont-sizeやcolorなどのプロパティ設定は、追加するテキストに対して適用されます。
+
+表示例
+<img class="hyouzirei2" src="セレクタ後編画像/10/10.png" alt="表示例10">
+    
+    
+<h2>・属性値::after（要素の直後にコンテンツを追加）</h2>
+<b>
+p.属性値::after{
+    content:"要素の直後にコンテンツを追加";
+    color:pink;
+}</b>
+before、afterともにcontentプロパティに画像を指定すると、
+テキストだけでなく画像も追加することが可能です。
+contentの中身が画像の場合はダブルクォーテーションで
+囲む必要はありません。
+
+    
+<h2 id="c3">4.タイプセレクタ(div p header,, ete) </h2>
+タイプセレクタとはhead、body、h1、p など既存の要素に対してスタイルを設定し、<b><span style="background: linear-gradient(transparent 70%, #FFFF7F 0%);">設定された要素内（親要素）に
+あるすべての要素（子要素）</span></b>にその設定されたスタイルが適用されるセレクタをタイプセレクタと呼びます。
+
+<br><br><br><br>
+
+<a href="要素・属性によるセレクター.html" class="btn btn-border-shadow btn-border-shadow--radius back">戻る</a>
+            
+
+
+</pre>
+</article>
+<aside>
+    <div class="widget--sticky">
+    <h2 class="sub-title">目次</h2>
+    <ul class="sub-menu">
+    <li><a href="#c1">疑似クラス</a></li>
+    <li><a href="#c2">疑似要素</a></li>
+    <li><a href="#c3">タイプセレクタ</a></li>
+    </ul>
+    </div>
+    </aside>
+    </div>
+    <footer>
+      <div>
+        <ul>
+          <li><a class="nav-link" href="../../../preparation-sub-top/preparatiion.html" >制作準備</a></li>
+          <li><a class="nav-link" href="../../../html-sub-top/create.html" >作り方&nbsp;&nbsp;</a></li>
+          <li><a class="nav-link" href="../../../design-sub-top/design.html" >デザイン</a></li>
+        </ul>
+      </div>
+      <div class="copy">
+        <p><small> Copyright &copy; 2021 All Rights Reserved by 僕たちも素人でした</small></p>
+      </div>
+    </footer>
+</body>
+</html>

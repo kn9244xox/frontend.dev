@@ -1,0 +1,182 @@
+/* 以下sub-topで共通の項目 */
+
+* {
+   margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: fantasy;
+    text-decoration: none;
+    
+  }
+  body {
+      width: 100%;
+      height: auto;
+      margin: 0%;
+      font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+      line-height: 1.7;
+      color: rgb(228, 210, 51);
+      
+    
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+ 
+
+
+
+
+
+.card{
+  width: 40%;
+  margin: auto;
+  height: 243px;
+  border: 1px solid rgb(35, 44, 75);
+  border-radius: 5px; 
+  padding: 20px;
+  box-shadow: 1px 2px 1px rgb(35, 44, 75);;
+  transition: 0.3s;
+  transition: all,0.4s;
+  text-align: unset;
+
+
+}
+#box-1{
+  background-image: url(img/tile1-1.svg);
+  background-size: cover;
+  color: rgb(9, 4, 65);
+
+}
+#box-2{
+  background-image: url(img/tile2.svg);
+  background-size: cover;
+  color: rgb(9, 4, 65);
+
+}
+#box-3{
+  background-image: url(img/tile3\ .svg);
+  background-size: cover;
+  color: rgb(9, 4, 65);
+
+
+}
+#box-4{
+  background-image: url(img/tile4-1.svg);
+  background-size: cover;
+  color: rgb(9, 4, 65);
+
+}
+
+
+
+
+
+
+
+.card:hover {
+  box-shadow: -5px 6px 19px 3px rgb(124 118 118 / 20%);
+  transform: scale(1.1,1.1);
+  background-color: rgb(221, 225, 233);
+  color: #20b2aa;
+}
+#box-1:hover{
+  color:#20b2aa;
+}
+#box-2:hover{
+  color:#20b2aa;
+}
+#box-3:hover{
+  color:#20b2aa;
+}
+#box-4:hover{
+  color:#20b2aa;
+}
+.card a{
+  color: bisque;
+}
+
+main{
+  display: flex;
+  margin: 100px 00px;
+}
+
+
+
+.tile-1,.tile-2,.tile-3{
+ 
+  width: 85%;
+  display: flex;  
+  margin: auto;
+  margin-top: 60px;
+  padding-bottom: 50px;
+ 
+
+}
+p{
+  text-align: center;
+  margin: 50px,50px;
+  font-size: 40px;
+  padding: 20px;
+}
+
+
+main a{
+  display:block;
+  width: 30%;
+  margin: auto;
+  height: 200px;
+
+}.mid{
+  color: rgb(9, 4, 65);
+
+}
+
+section h1{
+  margin-top: -65px;
+}
+
+
+
+/* .box{
+  width: 220px;
+  padding: 20px;
+  margin:0 20px 20px 0;
+  background: #666;
+  color: #fff;
+  box-sizing:border-box;
+} */
+
+
+
+/*==================================================
+ふわっ
+===================================*/
+
+
+/* fadeUp */
+
+.fadeUp{
+animation-name:fadeUpAnime;
+animation-duration:0.5s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+  transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+
+/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+ 
+.fadeUpTrigger{
+    opacity: 0;
+}

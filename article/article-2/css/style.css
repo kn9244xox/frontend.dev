@@ -1,0 +1,257 @@
+@charset "utf-8";
+
+/* 共通部分
+---------------------------------*/
+* {
+	margin: 0;
+	 padding: 0;
+	 box-sizing: border-box;
+	 
+	 text-decoration: none;
+   }
+html {
+       font-size:120%;
+}
+body {
+      font-family: monospace;
+      line-height: 1.9;
+      color: #432;/*#443322と同義*/
+
+}
+a {
+    text-decoration: none;
+	color: #1a0dab;
+}
+
+a:hover :not(.mylogo)
+{
+	text-decoration: underline;
+	color: #f89172
+}
+.page-header {
+     display: flex;
+     justify-content: space-between;
+}
+.wrapper{
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 4%;
+	margin-left: 30px;
+}
+/* HOME
+-------------------*/
+
+.home-content p {
+	font-size: 1.125rem;/*remフォントサイズの単位　使いやすくhtml要素で指定したサイズを1とする単位*/
+	margin: 10px 0 42px;
+}
+/*NEWS
+------------*/
+
+.post-info {
+	margin-left: -140px;
+	margin-bottom: -112px;
+	padding-top: 100px;
+}
+.post-title {
+	font-family: monospace;
+	font-size: 44.832px;
+	font-weight: normal;
+	letter-spacing: -.0027777778rem;
+	line-height: 1.75;
+    max-width: 85ch;
+}
+
+.edita
+{
+	margin-bottom: 40px !important;
+	margin-top: 0 !important;
+}
+
+.post-title,
+.post-cat {
+	margin-left: 138px;
+	margin-top: -56px;
+	display:  flex;
+}
+/*　記事部分*/
+article {
+	width: 74%;
+	margin-bottom: 50px;
+	margin-left: 10vw;
+}
+article img{
+	margin-bottom: 10px;
+	width: 800px;
+	height: 500px;
+}
+article p:not(html){
+	margin-top: 40px;
+}
+
+/*サイドバー*/
+aside {
+	width: 22%;
+	position: relative; top: 50px;left: 100px;
+}
+aside p {
+	padding: 12px 10px;
+}
+.news-contents {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 50px;
+}
+.sub-title{
+	font-size: 28.8px;
+	padding: 0 8px 8px;
+	border-bottom: 2px #0bd solid;
+	font-weight: normal;
+}
+.sub-menu {
+	margin-bottom: 60px;
+	list-style: none;
+}
+.sub-menu li {
+	border-bottom: 1px #ddd solid;
+}
+.sub-menu a {
+	color: #432;
+	padding: 10px;
+	display: block;
+}
+.sub-menu a:hover {
+	color: #0bd;
+}
+.widget--sticky
+{
+	position: sticky;
+  top: 20px;
+}
+  .h2
+  {
+	letter-spacing: -.0027777778rem;
+	line-height: 1.75;
+	color: #212121;
+	max-width: 85ch;
+	font-size: 39.056px;
+}
+.html{
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+.ul{
+	margin-left: 20px;
+}
+.saisyo{
+	margin-top: 0 !important;
+}
+h2{
+	margin-top: 60px;
+	font-family: 'Kiwi Maru', serif !important;
+}
+.ol{
+	margin-left: 20px;
+}
+.aaa{
+	margin-left: 36rem !important;
+}
+.li{
+	margin-bottom: 60px;
+}
+.neru{
+    width:  200px;
+    height: 120px;
+}
+.nemui{
+	width: 400px;
+	height: 300px;
+}
+.btn.next{
+	margin-left: 28rem !important;
+	margin-top: -102px;
+	}*:before,
+	*:after {
+	  -webkit-box-sizing: inherit;
+	  box-sizing: inherit;
+	}
+	.btn,
+	a.btn,
+	button.btn {
+	  font-size: 0.8rem;
+	  font-weight: 700;
+	  line-height: 1.5;
+	  position: relative;
+	  display: inline-block;
+	  padding: 1rem 4rem;
+	  cursor: pointer;
+	  -webkit-user-select: none;
+	  -moz-user-select: none;
+	  -ms-user-select: none;
+	  user-select: none;
+	  -webkit-transition: all 0.3s;
+	  transition: all 0.3s;
+	  text-align: center;
+	  vertical-align: middle;
+	  text-decoration: none;
+	  letter-spacing: 0.1em;
+	  color: #212529;
+	  border-radius: 0.5rem;
+		
+	}
+	a.btn-border-shadow--radius {
+	  border-radius: 100vh;
+	}
+	a.btn-border-shadow {
+	  padding: calc(1.5rem - 12px) 3rem 1.5rem;
+	  background: #fff;
+	}
+	a.btn-border-shadow:before {
+	  position: absolute;
+	  top: -6px;
+	  left: -6px;
+	  width: 100%;
+	  height: 100%;
+	  content: "";
+	  -webkit-transition: all 0.3s ease;
+	  transition: all 0.3s ease;
+	  border: 3px solid #000;
+	  border-radius: 0.5rem;
+	}
+	a.btn-border-shadow--radius:before {
+	  border-radius: 100vh;
+	}
+	a.btn-border-shadow:hover {
+	  padding: calc(1.5rem - 6px) 3rem;
+	}
+	a.btn-border-shadow:hover:before {
+	  top: 0;
+	  left: 0;
+	}
+	
+	.btn.back{
+		margin-top: -8.4rem;
+		
+	}
+	
+	.next-back{
+		display: block;
+	}
+
+	.hyouzirei{
+		margin-bottom: 10px;
+		width: 740px;
+		height: 220px;
+	}
+	.hyouzirei2{
+		margin-bottom: 10px;
+		width: 740px;
+		height: 300px;
+	}
+	.hyouzirei3{
+	margin-bottom: 10px;
+		width: 750px;
+		height: 355px;
+	}
+	
+
